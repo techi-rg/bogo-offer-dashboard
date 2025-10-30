@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+    margin: 0;
+    color: #333;
+  }
+  .container {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h2 {
+    color: #f8698d;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    color: #f8698d;
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-size: 20px;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  h2::before,
+  h2::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: #c0c0c0; /* light grey line */
+  }
+
+  .offer-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .offer-box:hover {
+    box-shadow: 0 0 10px rgba(248, 105, 141, 0.3);
+  }
+  .offer-box input[type="radio"] {
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  .offer-summary {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  .unit-offer {
+    font-weight: 700;
+    font-size: 16px;
+    color: #222;
+  }
+  .offer-badge {
+    background: #f8698d;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+  .price {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 15px;
+  }
+  .old-price {
+    text-decoration: line-through;
+    color: #bbb;
+    font-size: 14px;
+    margin-left: 8px;
+  }
+  .most-popular {
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    background: #f23838;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 0 0 6px 6px;
+    pointer-events: none;
+    user-select: none;
+  }
+  .expanded-content {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+  }
+  .offer-box.expanded {
+    padding-bottom: 20px;
+    box-shadow: 0 0 12px rgba(248, 105, 141, 0.35);
+  }
+  .offer-box.expanded .expanded-content {
+    display: block;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+  }
+  .form-row label {
+    width: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    user-select: none;
+  }
+  select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 80px;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #f8698d; /* pink border */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #f8698d; /* pink fill */
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+  
+
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  .free-delivery {
+    color: #f8698d;
+    font-weight: 600;
+  }
+  .total-price {
+    font-weight: 700;
+  }
+  .add-cart-btn {
+    margin-top: 25px;
+    width: 100%;
+    background: #f8698d;
+    border: none;
+    padding: 15px 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .add-cart-btn:hover {
+    background: #d7566e;
+  }
+
+  .copy-right-section{
+    text-align: end;
+    color:#00000066;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+  }
+ 
+  @media (max-width: 600px) {
+    .offer-summary {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .price, .unit-offer {
+      margin-left: 0;
+    }
+    .offer-box {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 15px 15px 25px 15px;
+    }
+  }
+  
